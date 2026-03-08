@@ -20,7 +20,7 @@ export async function generateMetadata({
     const guide = plantsBySlug[plant];
     if (!guide) return {};
     return {
-        title: `${guide.name} — Nursery Home`,
+        title: `${guide.name} — Flora & Luxe`,
         description: guide.subtitle,
     };
 }

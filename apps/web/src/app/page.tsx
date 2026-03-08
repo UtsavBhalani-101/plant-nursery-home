@@ -62,7 +62,7 @@ export default function Home() {
       <section className="relative h-[580px] w-full overflow-hidden">
         <Image
           src="/hero.png"
-          alt="Lush greenhouse interior at Nursery Home"
+          alt="Lush greenhouse interior at Flora & Luxe"
           fill
           priority
           className="object-cover object-center"
@@ -90,12 +90,7 @@ export default function Home() {
               >
                 🌿 Plan Your Visit
               </Link>
-              <Link
-                href="#our-story"
-                className="flex items-center gap-2 rounded-full border border-white/70 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-              >
-                Read Our Story
-              </Link>
+
             </div>
           </BlurFade>
         </div>
@@ -180,12 +175,7 @@ export default function Home() {
               >
                 Book a Free 15-min Consult
               </Link>
-              <Link
-                href="#our-story"
-                className="flex items-center gap-1.5 rounded-full border border-white/30 px-6 py-2.5 text-sm font-semibold text-white/90 hover:bg-white/10 transition-colors"
-              >
-                How it works <ArrowRight className="h-4 w-4" />
-              </Link>
+
             </div>
           </BlurFade>
         </div>
@@ -310,7 +300,7 @@ export default function Home() {
               <div className="flex items-start gap-2 text-sm text-stone-600">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
                 <div>
-                  <p className="font-semibold text-stone-800">Nursery Home</p>
+                  <p className="font-semibold text-stone-800">Flora &amp; Luxe</p>
                   <p>Ground Floor, Shop No. G-6 &amp; Anand</p>
                   <p>Aakaar City Centre, Lambhvel Rd</p>
                   <p>Opp. Zydus Hospital, Anand</p>
@@ -377,7 +367,7 @@ export default function Home() {
         <div className="border-t border-stone-200 px-6 py-4">
           <div className="mx-auto flex max-w-7xl items-center justify-between">
             <p className="text-xs text-stone-400">
-              © 2024 Nursery Home. Locally grown.
+              © 2026 Flora &amp; Luxe. Locally grown.
             </p>
             <div className="flex gap-4 text-xs text-stone-400">
               <Link href="#" className="hover:text-stone-600 transition-colors">Privacy</Link>

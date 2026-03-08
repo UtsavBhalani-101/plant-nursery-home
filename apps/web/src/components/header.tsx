@@ -6,8 +6,6 @@ const navLinks = [
   { href: "/guides", label: "Guides" },
   { href: "/#workshops", label: "Workshops" },
   { href: "/#plant-clinic", label: "Plant Clinic" },
-  { href: "/#our-story", label: "Our Story" },
-  { href: "/#visit", label: "Visit Us" },
 ] as const;
 
 export default function Header() {
@@ -18,7 +16,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Leaf className="h-5 w-5 text-orange-500" />
           <span className="font-semibold text-stone-800 text-sm tracking-wide">
-            Nursery Home
+            Flora &amp; Luxe
           </span>
         </Link>
 
