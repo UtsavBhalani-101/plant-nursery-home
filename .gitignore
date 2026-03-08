@@ -1,27 +1,41 @@
 # ─── Dependencies ─────────────────────────────────────────────────────────────
 node_modules
 .pnp
-.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # ─── Next.js ──────────────────────────────────────────────────────────────────
-.next
-out
+.next/
+out/
 next-env.d.ts
 
 # ─── Build outputs ────────────────────────────────────────────────────────────
-dist
-build
+dist/
+build/
 *.tsbuildinfo
+.vinxi
+.output
+.react-router/
+.tanstack/
+.nitro/
+.open-next
+dev-dist
 
 # ─── Environment variables ────────────────────────────────────────────────────
 .env
 .env.*
 .env*.local
+.dev.vars*
 !.env.example
 
 # ─── Logs ─────────────────────────────────────────────────────────────────────
 logs
 *.log
+*.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -56,11 +70,15 @@ Desktop.ini
 coverage
 .nyc_output
 
+# ─── Deployment ───────────────────────────────────────────────────────────────
+.vercel
+.netlify
+.wrangler
+
 # ─── Misc ─────────────────────────────────────────────────────────────────────
 *.tgz
+*.pem
+*.local
 .cache
 tmp
 temp
-
-# ─── Vercel ───────────────────────────────────────────────────────────────────
-.vercel
