@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 
 import "../index.css";
 import Header from "@/components/header";
@@ -13,7 +14,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Flora & Luxe — Rooted in your neighborhood since 2025",
   description:
-    "We don't just sell plants, we grow gardeners. Get personalized wisdom for your specific lighting and lifestyle from staff who know your micro-climate.",
+    "Plants for real homes, not just pretty photos. Get guidance from people who grow and care for these plants every day.",
 };
 
 export default function RootLayout({
@@ -23,7 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} antialiased`}>
+      <head>
+        {process.env.NODE_ENV === "development" && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
+      </head>
+      <body className={`${geistSans.variable} antialiased`} suppressHydrationWarning>
         <Providers>
           <Header />
           {children}

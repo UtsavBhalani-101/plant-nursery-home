@@ -3,9 +3,8 @@ import Link from "next/link";
 import { Leaf } from "lucide-react";
 
 const navLinks = [
-  { href: "/guides", label: "Guides" },
-  { href: "/#workshops", label: "Workshops" },
-  { href: "/#plant-clinic", label: "Plant Clinic" },
+  { href: "/guides", label: "Plant Guides" },
+  { href: "/visit", label: "Visit Us" },
 ] as const;
 
 export default function Header() {
@@ -35,7 +34,7 @@ export default function Header() {
 
         {/* CTA */}
         <Link
-          href="#visit"
+          href="/visit"
           className="rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
         >
           Plan Your Visit

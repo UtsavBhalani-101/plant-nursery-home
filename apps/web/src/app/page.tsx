@@ -47,9 +47,9 @@ const clinicServices = [
 ];
 
 const hours = [
-  { day: "Mon – Fri", time: "9:00 AM – 6:00 PM" },
-  { day: "Saturday", time: "8:00 AM – 7:00 PM" },
-  { day: "Sunday", time: "10:00 AM – 4:00 PM" },
+  { day: "Mon – Fri", time: "24 hours" },
+  { day: "Saturday", time: "24 hours" },
+  { day: "Sunday", time: "24 hours" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -73,19 +73,18 @@ export default function Home() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
           <BlurFade delay={0.1} inView>
             <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-              Rooted in our<br />neighborhood since 1995
+              Plants for real homes,<br />not just pretty photos.
             </h1>
           </BlurFade>
           <BlurFade delay={0.25} inView>
             <p className="mt-4 max-w-xl text-base text-white/85 leading-relaxed">
-              We don&rsquo;t just sell plants, we grow gardeners. Get personalized wisdom
-              for your specific lighting and lifestyle from staff who know your micro-climate.
+              Get guidance from people who grow and care for these plants every day.
             </p>
           </BlurFade>
           <BlurFade delay={0.4} inView>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <Link
-                href="#visit"
+                href="/visit"
                 className="flex items-center gap-2 rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
               >
                 🌿 Plan Your Visit
@@ -98,21 +97,13 @@ export default function Home() {
 
       {/* ── 2. This Week at the Nursery ─────────────────────────────────── */}
       <section id="workshops" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-bold text-stone-800">
-              This Week at the Nursery
-            </h2>
-            <p className="mt-1 text-sm text-stone-500">
-              Workshops, fresh arrivals, and community gatherings.
-            </p>
-          </div>
-          <Link
-            href="#workshops"
-            className="flex items-center gap-1 text-sm font-medium text-orange-500 hover:text-orange-600 transition-colors"
-          >
-            View Full Calendar <ArrowRight className="h-4 w-4" />
-          </Link>
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-stone-800">
+            This Week at the Nursery
+          </h2>
+          <p className="mt-1 text-sm text-stone-500">
+            Workshops, fresh arrivals, and community gatherings.
+          </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -151,31 +142,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 3. Ask Before You Buy Guarantee ─────────────────────────────── */}
+      {/* ── 3. Personal Plant Advice ─────────────────────────────────────── */}
       <section className="w-full bg-[#3d4a38] px-6 py-20 text-white">
         <div className="mx-auto max-w-2xl text-center">
           <BlurFade delay={0.1} inView>
-            <div className="mb-4 flex justify-center">
-              <AnimatedShinyText className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium text-white/80 backdrop-blur-sm">
-                ✦ No Commission Sales Staff
-              </AnimatedShinyText>
-            </div>
             <h2 className="text-3xl font-bold md:text-4xl leading-snug">
-              The &lsquo;Ask Before You Buy&rsquo;<br />Guarantee
+              Not sure which plant will<br />work in your home?
             </h2>
             <p className="mt-5 text-base text-white/75 leading-relaxed">
-              Bring us photos of your space, your windows, and your lifestyle. We&rsquo;ll tell
-              you exactly what will thrive (and what won&rsquo;t). No more guessing, no more plant
-              graveyard.
+              Show us your room, balcony, or window light and we&rsquo;ll recommend
+              plants that will actually grow there.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
-                href="#plant-clinic"
+                href="/visit"
                 className="rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
               >
-                Book a Free 15-min Consult
+                Ask for Plant Advice
               </Link>
-
+              <a
+                href="https://wa.me/919724739315"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
+              >
+                Message Us Before You Buy
+              </a>
             </div>
           </BlurFade>
         </div>
@@ -224,21 +216,6 @@ export default function Home() {
                   height={350}
                   className="h-72 w-full object-cover"
                 />
-              </div>
-            </div>
-
-            {/* Testimonial */}
-            <div className="mt-4 flex items-center gap-3 rounded-xl bg-stone-50 p-4">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-100 text-sm font-bold text-green-700">
-                M
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-stone-800">
-                  Mrs. Baker&rsquo;s Fiddle Leaf
-                </p>
-                <p className="text-xs text-stone-500">
-                  &ldquo;The clinic diagnosed a root rot issue I couldn&rsquo;t see. Two months later, she&rsquo;s a completely new plant!&rdquo;
-                </p>
               </div>
             </div>
           </BlurFade>
@@ -334,10 +311,10 @@ export default function Home() {
               </h4>
               <p className="mb-1 text-xs text-stone-400">Questions? Give us a call.</p>
               <a
-                href="tel:+15035550199"
+                href="tel:+919724739315"
                 className="text-2xl font-bold text-orange-500 hover:text-orange-600 transition-colors"
               >
-                (503) 555-0199
+                +91 97247 39315
               </a>
               <div className="mt-5 flex gap-3">
                 <a
