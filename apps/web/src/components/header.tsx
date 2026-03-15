@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Leaf } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/guides", label: "Plant Guides" },
@@ -13,7 +13,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Leaf className="h-5 w-5 text-orange-500" />
+          <Image src="/logo.svg" alt="Flora & Luxe Logo" width={28} height={36} className="h-8 w-auto" />
           <span className="font-semibold text-stone-800 text-sm tracking-wide">
             Flora &amp; Luxe
           </span>

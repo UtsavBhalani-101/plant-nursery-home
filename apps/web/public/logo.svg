@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150" fill="none">
+  <defs>
+    <!-- Monochrome golden gradient -->
+    <linearGradient id="leafGold" x1="50" y1="5" x2="50" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e8c547"/>
+      <stop offset="35%" stop-color="#d4a017"/>
+      <stop offset="65%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+    <!-- Golden outer glow -->
+    <filter id="goldenGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1"/>
+      <feFlood flood-color="#d4a017" flood-opacity="0.7" result="glowColor1"/>
+      <feComposite in="glowColor1" in2="blur1" operator="in" result="softGlow1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur2"/>
+      <feFlood flood-color="#f0d060" flood-opacity="0.5" result="glowColor2"/>
+      <feComposite in="glowColor2" in2="blur2" operator="in" result="softGlow2"/>
+      <feMerge>
+        <feMergeNode in="softGlow1"/>
+        <feMergeNode in="softGlow2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#goldenGlow)">
+    <!-- Main leaf outer shape -->
+    <path d="M50 10
+             C32 32, 16 55, 16 78
+             C16 98, 30 112, 50 118
+             C70 112, 84 98, 84 78
+             C84 55, 68 32, 50 10Z" 
+          stroke="url(#leafGold)" 
+          stroke-width="5" 
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    
+    <!-- Central stem / vein -->
+    <line x1="50" y1="22" x2="50" y2="140" 
+          stroke="url(#leafGold)" 
+          stroke-width="4.5" 
+          stroke-linecap="round"/>
+    
+    <!-- Top V sprout at the tip -->
+    <path d="M42 18 L50 8 L58 18" 
+          stroke="url(#leafGold)" 
+          stroke-width="4.5" 
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    
+    <!-- Left veins (thick) -->
+    <path d="M50 44 L28 32" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    <path d="M50 60 L22 50" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    <path d="M50 76 L20 68" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    <path d="M50 90 L24 86" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    
+    <!-- Right veins (thick) -->
+    <path d="M50 44 L72 32" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    <path d="M50 60 L78 50" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    <path d="M50 76 L80 68" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    <path d="M50 90 L76 86" 
+          stroke="url(#leafGold)" 
+          stroke-width="4" 
+          fill="none"
+          stroke-linecap="round"/>
+    
+    <!-- Stem below leaf -->
+    <line x1="50" y1="118" x2="50" y2="140" 
+          stroke="url(#leafGold)" 
+          stroke-width="4.5" 
+          stroke-linecap="round"/>
+  </g>
+</svg>
