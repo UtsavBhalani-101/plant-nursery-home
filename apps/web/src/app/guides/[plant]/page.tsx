@@ -170,7 +170,7 @@ export default async function PlantGuidePage({
                                     {guide.troubleshooting.map((t) => (
                                         <div key={t.problem} className="flex h-full flex-col rounded-2xl border border-stone-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                                             <p className="mb-5 text-base font-bold text-[#3a7d34]">{t.problem}</p>
-                                            
+
                                             <div className="flex flex-1 flex-col gap-4">
                                                 <div className="flex-1">
                                                     <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-stone-400">Reason</p>
@@ -192,10 +192,15 @@ export default async function PlantGuidePage({
                         <div className="flex flex-col gap-6 pt-4 border-t border-stone-100">
                             <BlurFade delay={0.48} inView>
                                 <div className="rounded-2xl bg-stone-50/50 p-6 sm:p-8">
-                                    <h3 className="mb-3 text-lg font-bold text-stone-800">Plant Summary</h3>
-                                    <p className="text-sm font-medium leading-relaxed text-stone-600 md:text-base">
-                                        {guide.description}
-                                    </p>
+                                    <h3 className="mb-4 text-lg font-bold text-stone-800">Plant Summary</h3>
+                                    <ul className="space-y-2">
+                                        {guide.description.split('. ').filter(Boolean).map((sentence, idx) => (
+                                            <li key={idx} className="flex items-start gap-3 text-sm font-medium leading-relaxed text-stone-600 md:text-base">
+                                                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3a7d34]" />
+                                                <span>{sentence.trim()}{sentence.endsWith('.') ? '' : '.'}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </BlurFade>
                         </div>
