@@ -84,6 +84,27 @@ export default async function PlantGuidePage({
                                     </p>
                                 </div>
                             </BlurFade>
+
+                            {/* Quick Summary */}
+                            <BlurFade delay={0.12} inView>
+                                <div className="grid grid-cols-3 gap-2 rounded-2xl bg-white p-5 shadow-sm border border-stone-100 md:gap-4 md:p-6">
+                                    <div className="flex flex-col items-center gap-1.5 text-center">
+                                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600 text-lg">☀️</span>
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Light</p>
+                                        <p className="text-xs font-bold text-stone-800 md:text-sm">{guide.quickSummary.light}</p>
+                                    </div>
+                                    <div className="flex flex-col items-center gap-1.5 border-x border-stone-100 px-2 text-center">
+                                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 text-lg">💧</span>
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Water</p>
+                                        <p className="text-xs font-bold text-stone-800 md:text-sm">{guide.quickSummary.water}</p>
+                                    </div>
+                                    <div className="flex flex-col items-center gap-1.5 text-center">
+                                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-stone-50 text-stone-600 text-lg">🌱</span>
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Difficulty</p>
+                                        <p className="text-xs font-bold text-stone-800 md:text-sm">{guide.quickSummary.difficulty}</p>
+                                    </div>
+                                </div>
+                            </BlurFade>
                         </div>
 
                         {/* Standard Care Section */}
@@ -163,6 +184,18 @@ export default async function PlantGuidePage({
                                             </div>
                                         </div>
                                     ))}
+                                </div>
+                            </BlurFade>
+                        </div>
+
+                        {/* Summary Section */}
+                        <div className="flex flex-col gap-6 pt-4 border-t border-stone-100">
+                            <BlurFade delay={0.48} inView>
+                                <div className="rounded-2xl bg-stone-50/50 p-6 sm:p-8">
+                                    <h3 className="mb-3 text-lg font-bold text-stone-800">Plant Summary</h3>
+                                    <p className="text-sm font-medium leading-relaxed text-stone-600 md:text-base">
+                                        {guide.description}
+                                    </p>
                                 </div>
                             </BlurFade>
                         </div>
