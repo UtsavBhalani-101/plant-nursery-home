@@ -71,6 +71,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
+          {/* Badge pills */}
+          <BlurFade delay={0.05} inView>
+            <div className="mb-6 flex flex-wrap items-center justify-center gap-2">
+              <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
+                🌿 Local Nursery
+              </span>
+              <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
+                🏡 Neighborhood Favorite
+              </span>
+            </div>
+          </BlurFade>
           <BlurFade delay={0.1} inView>
             <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-tight md:text-5xl">
               Plants for real homes,<br />not just pretty photos.
@@ -85,11 +96,16 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <Link
                 href="/visit"
-                className="flex items-center gap-2 rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                className="flex items-center gap-2 rounded-full bg-[#3a7d34] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2d6228] transition-colors"
               >
                 🌿 Plan Your Visit
               </Link>
-
+              <Link
+                href="/guides"
+                className="flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/20 backdrop-blur-sm transition-colors"
+              >
+                📖 Read Our Guides
+              </Link>
             </div>
           </BlurFade>
         </div>
@@ -97,13 +113,21 @@ export default function Home() {
 
       {/* ── 2. This Week at the Nursery ─────────────────────────────────── */}
       <section id="workshops" className="mx-auto max-w-7xl px-6 pt-24 pb-16">
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-stone-800">
-            This Week at the Nursery
-          </h2>
-          <p className="mt-4 text-sm text-stone-500">
-            Workshops, fresh arrivals, and community gatherings.
-          </p>
+        <div className="mb-16 flex items-end justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-stone-800">
+              This Week at the Nursery
+            </h2>
+            <p className="mt-4 text-sm text-stone-500">
+              Workshops, fresh arrivals, and community gatherings.
+            </p>
+          </div>
+          <Link
+            href="/#workshops"
+            className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold text-[#3a7d34] hover:text-[#2d6228] transition-colors whitespace-nowrap"
+          >
+            View Full Calendar <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -146,6 +170,12 @@ export default function Home() {
       <section className="w-full bg-[#3d4a38] px-6 py-16 text-white">
         <div className="mx-auto max-w-2xl text-center">
           <BlurFade delay={0.1} inView>
+            {/* Small badge pill */}
+            <div className="mb-6 flex justify-center">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm">
+                ✋ No Commitment — Free Advice
+              </span>
+            </div>
             <h2 className="text-3xl font-bold md:text-4xl leading-snug">
               Not sure which plant will<br />work in your home?
             </h2>
@@ -156,7 +186,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/visit"
-                className="rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                className="rounded-full bg-[#3a7d34] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2d6228] transition-colors"
               >
                 Ask for Plant Advice
               </Link>
@@ -164,9 +194,9 @@ export default function Home() {
                 href="https://wa.me/919724739315"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
               >
-                Message Us Before You Buy
+                How it works <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </BlurFade>
@@ -176,7 +206,7 @@ export default function Home() {
       {/* ── 4. From Wilted to Wonderful ─────────────────────────────────── */}
       <section id="plant-clinic" className="mx-auto max-w-7xl px-6 py-16">
         <BlurFade delay={0.1} inView>
-          <p className="mb-1 text-center text-xs font-semibold uppercase tracking-widest text-orange-500">
+          <p className="mb-1 text-center text-xs font-semibold uppercase tracking-widest text-[#3a7d34]">
             Local Success Stories
           </p>
           <h2 className="mb-2 text-center text-2xl font-bold text-stone-800">
@@ -237,14 +267,14 @@ export default function Home() {
               <ul className="space-y-2.5">
                 {clinicServices.map((s) => (
                   <li key={s} className="flex items-start gap-2.5 text-sm text-stone-700">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#3a7d34]" />
                     {s}
                   </li>
                 ))}
               </ul>
               <Link
                 href="#plant-clinic"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#3a7d34] hover:text-[#2d6228] transition-colors"
               >
                 Learn more about the Clinic <ArrowRight className="h-4 w-4" />
               </Link>
@@ -275,7 +305,7 @@ export default function Home() {
                 />
               </div>
               <div className="flex items-start gap-2 text-sm text-stone-600">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#3a7d34]" />
                 <div>
                   <p className="font-semibold text-stone-800">Flora &amp; Luxe</p>
                   <p>Ground Floor, Shop No. G-6 &amp; Anand</p>
@@ -312,7 +342,7 @@ export default function Home() {
               <p className="mb-1 text-xs text-stone-400">Questions? Give us a call.</p>
               <a
                 href="tel:+919724739315"
-                className="text-2xl font-bold text-orange-500 hover:text-orange-600 transition-colors"
+                className="text-2xl font-bold text-[#3a7d34] hover:text-[#2d6228] transition-colors"
               >
                 +91 97247 39315
               </a>

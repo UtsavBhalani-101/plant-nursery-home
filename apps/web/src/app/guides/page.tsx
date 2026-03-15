@@ -50,10 +50,10 @@ export default function GuidesIndex() {
                                 {/* Card content */}
                                 <div className="p-6 space-y-4">
                                     <div className="flex items-start justify-between gap-2">
-                                        <h2 className="text-lg font-bold text-stone-800 group-hover:text-orange-600 transition-colors leading-snug">
+                                        <h2 className="text-lg font-bold text-stone-800 group-hover:text-[#3a7d34] transition-colors leading-snug">
                                             {plant.name.replace(" Care Guide", "")}
                                         </h2>
-                                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-stone-300 group-hover:text-orange-500 transition-colors" />
+                                        <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-stone-300 group-hover:text-[#3a7d34] transition-colors" />
                                     </div>
 
                                     <p className="text-sm text-stone-500 leading-relaxed line-clamp-2">
@@ -79,7 +79,7 @@ export default function GuidesIndex() {
 
                 {/* Bottom message */}
                 <BlurFade delay={0.5} inView>
-                    <div className="mt-16 rounded-2xl bg-orange-50 p-6 text-center shadow-sm">
+                    <div className="mt-16 rounded-2xl bg-green-50 p-6 text-center shadow-sm">
                         <p className="text-lg font-bold text-stone-800">
                             Don&rsquo;t see your plant here?
                         </p>
@@ -91,7 +91,7 @@ export default function GuidesIndex() {
                             href="https://wa.me/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-5 inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#3a7d34] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2d6228] transition-colors"
                         >
                             Ask Us on WhatsApp
                         </a>

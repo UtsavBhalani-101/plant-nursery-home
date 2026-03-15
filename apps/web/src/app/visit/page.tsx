@@ -45,7 +45,7 @@ export default function VisitPage() {
                                 href="https://wa.me/919724739315"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                                className="inline-flex items-center gap-2 rounded-full bg-[#3a7d34] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2d6228] transition-colors"
                             >
                                 <MessageCircle className="h-4 w-4" />
                                 Message Us on WhatsApp
@@ -81,7 +81,7 @@ export default function VisitPage() {
                                 />
                             </div>
                             <div className="flex items-start gap-3 text-sm text-stone-600">
-                                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-orange-500" />
+                                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#3a7d34]" />
                                 <div>
                                     <p className="font-semibold text-stone-800 text-base">Flora &amp; Luxe</p>
                                     <p className="mt-1">Ground Floor, Shop No. G-6 &amp; Anand</p>
@@ -99,9 +99,9 @@ export default function VisitPage() {
                                 </h3>
                                 <a
                                     href="tel:+919724739315"
-                                    className="flex items-center gap-2.5 text-sm text-stone-700 hover:text-orange-500 transition-colors"
+                                    className="flex items-center gap-2.5 text-sm text-stone-700 hover:text-[#3a7d34] transition-colors"
                                 >
-                                    <Phone className="h-4 w-4 text-orange-500" />
+                                    <Phone className="h-4 w-4 text-[#3a7d34]" />
                                     +91 97247 39315
                                 </a>
                                 <a
@@ -157,7 +157,7 @@ export default function VisitPage() {
                                 <ul className="space-y-3">
                                     {tips.map((tip) => (
                                         <li key={tip} className="flex items-start gap-3 text-sm text-stone-600">
-                                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
+                                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#3a7d34]" />
                                             {tip}
                                         </li>
                                     ))}
@@ -176,7 +176,7 @@ export default function VisitPage() {
                                     href="https://wa.me/919724739315"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"
+                                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#3a7d34] hover:text-[#2d6228] transition-colors"
                                 >
                                     Ask for Plant Advice <ArrowRight className="h-4 w-4" />
                                 </a>

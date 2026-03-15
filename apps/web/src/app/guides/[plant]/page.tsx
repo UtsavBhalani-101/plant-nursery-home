@@ -86,7 +86,7 @@ export default async function PlantGuidePage({
                         {/* Standard Care heading */}
                         <BlurFade delay={0.15} inView>
                             <div className="flex items-center gap-2">
-                                <span className="text-orange-500">🛡️</span>
+                                <span className="text-[#3a7d34]">🛡️</span>
                                 <h2 className="text-lg font-bold text-stone-800">Standard Care</h2>
                             </div>
                         </BlurFade>
@@ -96,7 +96,7 @@ export default async function PlantGuidePage({
                             <BlurFade key={card.title} delay={0.2 + i * 0.1} inView>
                                 <div className="rounded-2xl bg-white p-6 shadow-sm space-y-4">
                                     <div className="flex items-center gap-2">
-                                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-xl">
+                                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-50 text-xl">
                                             {card.icon}
                                         </span>
                                         <h3 className="font-semibold text-stone-800">{card.title}</h3>
@@ -104,13 +104,13 @@ export default async function PlantGuidePage({
                                     <ul className="space-y-1.5">
                                         {card.tips.map((tip) => (
                                             <li key={tip} className="flex items-start gap-2 text-sm text-stone-600">
-                                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-400" />
+                                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3a7d34]" />
                                                 {tip}
                                             </li>
                                         ))}
                                     </ul>
                                     {card.warning && (
-                                        <div className="flex items-start gap-2 rounded-lg bg-orange-50 px-4 py-3 text-sm text-orange-700">
+                                        <div className="flex items-start gap-2 rounded-lg bg-amber-50 px-4 py-3 text-sm text-amber-700">
                                             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
                                             {card.warning}
                                         </div>
@@ -122,7 +122,7 @@ export default async function PlantGuidePage({
                         {/* Troubleshooting heading */}
                         <BlurFade delay={0.4} inView>
                             <div className="flex items-center gap-2 pt-2">
-                                <span className="text-orange-600">🔸</span>
+                                <span className="text-[#3a7d34]">🔸</span>
                                 <h2 className="text-lg font-bold text-stone-800">Troubleshooting</h2>
                             </div>
                         </BlurFade>
@@ -132,7 +132,7 @@ export default async function PlantGuidePage({
                             <div className="grid gap-4 sm:grid-cols-3">
                                 {guide.troubleshooting.map((t) => (
                                     <div key={t.problem} className="rounded-2xl bg-white p-6 shadow-sm space-y-4">
-                                        <p className="font-semibold text-orange-600">{t.problem}</p>
+                                        <p className="font-semibold text-[#3a7d34]">{t.problem}</p>
                                         <div>
                                             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Reason</p>
                                             <p className="text-sm text-stone-600">{t.reason}</p>
@@ -155,7 +155,7 @@ export default async function PlantGuidePage({
                                     href="https://wa.me/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-orange-500 underline hover:text-orange-600"
+                                    className="text-[#3a7d34] underline hover:text-[#2d6228]"
                                 >
                                     message us on WhatsApp
                                 </a>{" "}
@@ -165,7 +165,7 @@ export default async function PlantGuidePage({
 
                         {/* Still need assistance CTA */}
                         <BlurFade delay={0.55} inView>
-                            <div className="rounded-2xl bg-orange-50 p-6 text-center shadow-sm">
+                            <div className="rounded-2xl bg-green-50 p-6 text-center shadow-sm">
                                 <h3 className="text-xl font-bold text-stone-800">
                                     Still need assistance?
                                 </h3>
@@ -177,7 +177,7 @@ export default async function PlantGuidePage({
                                     href="https://wa.me/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="mt-5 inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                                    className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#3a7d34] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2d6228] transition-colors"
                                 >
                                     <MessageCircle className="h-4 w-4" />
                                     Ask Us on WhatsApp
@@ -215,14 +215,14 @@ export default async function PlantGuidePage({
                                                 />
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                                <p className="truncate text-sm font-semibold text-stone-800 group-hover:text-orange-600 transition-colors">
+                                                <p className="truncate text-sm font-semibold text-stone-800 group-hover:text-[#3a7d34] transition-colors">
                                                     {p.name.replace(" Care Guide", "")}
                                                 </p>
                                                 <p className="text-[11px] uppercase tracking-wider text-stone-400">
                                                     {p.badges[0]?.label}
                                                 </p>
                                             </div>
-                                            <ChevronRight className="h-4 w-4 shrink-0 text-stone-300 group-hover:text-orange-400 transition-colors" />
+                                            <ChevronRight className="h-4 w-4 shrink-0 text-stone-300 group-hover:text-[#3a7d34] transition-colors" />
                                         </Link>
                                     ))}
                                 </div>
@@ -234,7 +234,7 @@ export default async function PlantGuidePage({
                                 </p>
                                 <Link
                                     href="/"
-                                    className="block w-full rounded-full border border-orange-500 py-2 text-center text-sm font-semibold text-orange-500 hover:bg-orange-500 hover:text-white transition-colors"
+                                    className="block w-full rounded-full border border-[#3a7d34] py-2 text-center text-sm font-semibold text-[#3a7d34] hover:bg-[#3a7d34] hover:text-white transition-colors"
                                 >
                                     View Full Shop
                                 </Link>

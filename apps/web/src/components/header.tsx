@@ -35,7 +35,7 @@ export default function Header() {
         {/* CTA */}
         <Link
           href="/visit"
-          className="rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+          className="rounded-full bg-[#3a7d34] px-5 py-2 text-sm font-semibold text-white hover:bg-[#2d6228] transition-colors"
         >
           Plan Your Visit
         </Link>
