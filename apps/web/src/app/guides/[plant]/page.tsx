@@ -189,14 +189,25 @@ export default async function PlantGuidePage({
                         </div>
 
                         {/* Summary Section */}
-                        <div className="flex flex-col gap-6 pt-4 border-t border-stone-100">
+                        <div className="flex flex-col gap-6">
+                            {/* Summary heading */}
                             <BlurFade delay={0.48} inView>
-                                <div className="rounded-2xl bg-stone-50/50 p-6 sm:p-8">
-                                    <h3 className="mb-4 text-lg font-bold text-stone-800">Plant Summary</h3>
-                                    <ul className="space-y-2">
+                                <div className="flex items-center gap-3 border-b border-stone-200 pb-3">
+                                    <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100">
+                                        <span className="absolute inline-flex h-4 w-4 animate-ping rounded-full bg-blue-500 opacity-40"></span>
+                                        <span className="relative inline-flex h-3 w-3 rounded-full bg-blue-500"></span>
+                                    </span>
+                                    <h2 className="text-2xl font-bold tracking-tight text-stone-800">Plant Summary</h2>
+                                </div>
+                            </BlurFade>
+
+                            {/* Summary card */}
+                            <BlurFade delay={0.5} inView>
+                                <div className="rounded-2xl border border-stone-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                                    <ul className="space-y-4">
                                         {guide.description.split('. ').filter(Boolean).map((sentence, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-sm font-medium leading-relaxed text-stone-600 md:text-base">
-                                                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3a7d34]" />
+                                            <li key={idx} className="flex items-start gap-4 text-sm font-medium leading-relaxed text-stone-600 md:text-base">
+                                                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
                                                 <span>{sentence.trim()}{sentence.endsWith('.') ? '' : '.'}</span>
                                             </li>
                                         ))}
