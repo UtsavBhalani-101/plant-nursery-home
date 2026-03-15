@@ -27,7 +27,7 @@ export default function VisitPage() {
         <main className="min-h-screen bg-white text-stone-800">
 
             {/* ── Hero ─────────────────────────────────────────────────────────── */}
-            <section className="w-full bg-[#3d4a38] px-6 py-20 text-white">
+            <section className="w-full bg-[#3d4a38] px-6 py-16 text-white">
                 <div className="mx-auto max-w-3xl text-center">
                     <BlurFade delay={0.1} inView>
                         <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-white/60">
@@ -63,7 +63,7 @@ export default function VisitPage() {
             </section>
 
             {/* ── Main content ─────────────────────────────────────────────────── */}
-            <section className="mx-auto max-w-7xl px-6 py-16">
+            <section className="mx-auto max-w-7xl px-6 pt-24 pb-16">
                 <div className="grid gap-12 md:grid-cols-2">
 
                     {/* Left — Map + Address */}

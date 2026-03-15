@@ -39,15 +39,15 @@ export default async function PlantGuidePage({
 
     return (
         <main className="min-h-screen bg-[#f7f6f3]">
-            <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+            <div className="mx-auto max-w-6xl px-4 pt-24 pb-16 md:px-6">
                 <div className="grid gap-8 md:grid-cols-[1fr_300px]">
 
                     {/* ── LEFT COLUMN ─────────────────────────────────────────────── */}
-                    <div className="space-y-6">
+                    <div className="space-y-16">
 
                         {/* Hero card */}
                         <BlurFade delay={0.05} inView>
-                            <div className="flex gap-5 rounded-2xl bg-white p-5 shadow-sm">
+                            <div className="flex gap-5 rounded-2xl bg-white p-6 shadow-sm">
                                 <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-xl bg-stone-50">
                                     <Image
                                         src={guide.image}
@@ -61,7 +61,7 @@ export default async function PlantGuidePage({
                                     <h1 className="text-2xl font-bold leading-snug text-stone-800">
                                         {guide.name}
                                     </h1>
-                                    <p className="mt-1 text-sm text-stone-500">{guide.subtitle}</p>
+                                    <p className="mt-4 text-sm text-stone-500">{guide.subtitle}</p>
                                     <div className="mt-3 flex flex-wrap gap-2">
                                         {guide.badges.map((b) => (
                                             <span
@@ -78,7 +78,7 @@ export default async function PlantGuidePage({
 
                         {/* Quote */}
                         <BlurFade delay={0.1} inView>
-                            <p className="rounded-xl bg-white px-5 py-4 text-sm italic text-stone-500 shadow-sm">
+                            <p className="rounded-xl bg-white p-6 text-sm italic text-stone-500 shadow-sm">
                                 {guide.quote}
                             </p>
                         </BlurFade>
@@ -94,7 +94,7 @@ export default async function PlantGuidePage({
                         {/* Care cards */}
                         {guide.careCards.map((card, i) => (
                             <BlurFade key={card.title} delay={0.2 + i * 0.1} inView>
-                                <div className="rounded-2xl bg-white p-5 shadow-sm space-y-3">
+                                <div className="rounded-2xl bg-white p-6 shadow-sm space-y-4">
                                     <div className="flex items-center gap-2">
                                         <span className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-xl">
                                             {card.icon}
@@ -131,7 +131,7 @@ export default async function PlantGuidePage({
                         <BlurFade delay={0.45} inView>
                             <div className="grid gap-4 sm:grid-cols-3">
                                 {guide.troubleshooting.map((t) => (
-                                    <div key={t.problem} className="rounded-2xl bg-white p-4 shadow-sm space-y-2">
+                                    <div key={t.problem} className="rounded-2xl bg-white p-6 shadow-sm space-y-4">
                                         <p className="font-semibold text-orange-600">{t.problem}</p>
                                         <div>
                                             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Reason</p>
@@ -165,11 +165,11 @@ export default async function PlantGuidePage({
 
                         {/* Still need assistance CTA */}
                         <BlurFade delay={0.55} inView>
-                            <div className="rounded-2xl bg-orange-50 p-8 text-center shadow-sm">
+                            <div className="rounded-2xl bg-orange-50 p-6 text-center shadow-sm">
                                 <h3 className="text-xl font-bold text-stone-800">
                                     Still need assistance?
                                 </h3>
-                                <p className="mt-2 text-sm text-stone-500">
+                                <p className="mt-4 text-sm text-stone-500">
                                     Our plant experts are available daily to help you diagnose
                                     issues or give personalized advice.
                                 </p>
@@ -192,9 +192,9 @@ export default async function PlantGuidePage({
                     </div>
 
                     {/* ── RIGHT SIDEBAR ────────────────────────────────────────────── */}
-                    <aside className="space-y-4">
+                    <aside className="space-y-16">
                         <BlurFade delay={0.1} inView>
-                            <div className="rounded-2xl bg-white p-5 shadow-sm">
+                            <div className="rounded-2xl bg-white p-6 shadow-sm">
                                 <div className="mb-4 flex items-center gap-2">
                                     <span>📚</span>
                                     <h2 className="font-bold text-stone-800">More Guides</h2>

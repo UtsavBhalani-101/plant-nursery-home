@@ -13,14 +13,14 @@ export const metadata = {
 export default function GuidesIndex() {
     return (
         <main className="min-h-screen bg-[#f7f6f3]">
-            <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
+            <div className="mx-auto max-w-6xl px-4 pt-24 pb-16 md:px-6">
                 {/* Page header */}
                 <BlurFade delay={0.05} inView>
-                    <div className="mb-10 text-center">
+                    <div className="mb-24 text-center">
                         <h1 className="text-3xl font-bold text-stone-800 md:text-4xl">
                             🌿 Plant Care Guides
                         </h1>
-                        <p className="mt-3 text-stone-500 text-sm md:text-base max-w-xl mx-auto">
+                        <p className="mt-4 text-stone-500 text-sm md:text-base max-w-xl mx-auto">
                             Choose a plant below to get simple, practical care instructions — from
                             watering schedules to troubleshooting common problems.
                         </p>
@@ -48,7 +48,7 @@ export default function GuidesIndex() {
                                 </div>
 
                                 {/* Card content */}
-                                <div className="p-5 space-y-3">
+                                <div className="p-6 space-y-4">
                                     <div className="flex items-start justify-between gap-2">
                                         <h2 className="text-lg font-bold text-stone-800 group-hover:text-orange-600 transition-colors leading-snug">
                                             {plant.name.replace(" Care Guide", "")}
@@ -79,11 +79,11 @@ export default function GuidesIndex() {
 
                 {/* Bottom message */}
                 <BlurFade delay={0.5} inView>
-                    <div className="mt-12 rounded-2xl bg-orange-50 p-8 text-center shadow-sm">
+                    <div className="mt-16 rounded-2xl bg-orange-50 p-6 text-center shadow-sm">
                         <p className="text-lg font-bold text-stone-800">
                             Don&rsquo;t see your plant here?
                         </p>
-                        <p className="mt-2 text-sm text-stone-500">
+                        <p className="mt-4 text-sm text-stone-500">
                             We add new guides every week. Message us on WhatsApp and we&rsquo;ll
                             help you with personalized care tips.
                         </p>

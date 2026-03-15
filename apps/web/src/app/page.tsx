@@ -96,12 +96,12 @@ export default function Home() {
       </section>
 
       {/* ── 2. This Week at the Nursery ─────────────────────────────────── */}
-      <section id="workshops" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-8">
+      <section id="workshops" className="mx-auto max-w-7xl px-6 pt-24 pb-16">
+        <div className="mb-16">
           <h2 className="text-2xl font-bold text-stone-800">
             This Week at the Nursery
           </h2>
-          <p className="mt-1 text-sm text-stone-500">
+          <p className="mt-4 text-sm text-stone-500">
             Workshops, fresh arrivals, and community gatherings.
           </p>
         </div>
@@ -125,7 +125,7 @@ export default function Home() {
                   </span>
                 </div>
                 {/* Content */}
-                <div className="p-4">
+                <div className="p-6">
                   <p className="mb-1 text-xs font-medium text-stone-400 uppercase tracking-wider">
                     {event.subtitle}
                   </p>
@@ -143,13 +143,13 @@ export default function Home() {
       </section>
 
       {/* ── 3. Personal Plant Advice ─────────────────────────────────────── */}
-      <section className="w-full bg-[#3d4a38] px-6 py-20 text-white">
+      <section className="w-full bg-[#3d4a38] px-6 py-16 text-white">
         <div className="mx-auto max-w-2xl text-center">
           <BlurFade delay={0.1} inView>
             <h2 className="text-3xl font-bold md:text-4xl leading-snug">
               Not sure which plant will<br />work in your home?
             </h2>
-            <p className="mt-5 text-base text-white/75 leading-relaxed">
+            <p className="mt-4 text-base text-white/75 leading-relaxed">
               Show us your room, balcony, or window light and we&rsquo;ll recommend
               plants that will actually grow there.
             </p>
@@ -174,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* ── 4. From Wilted to Wonderful ─────────────────────────────────── */}
-      <section id="plant-clinic" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="plant-clinic" className="mx-auto max-w-7xl px-6 py-16">
         <BlurFade delay={0.1} inView>
           <p className="mb-1 text-center text-xs font-semibold uppercase tracking-widest text-orange-500">
             Local Success Stories
@@ -182,7 +182,7 @@ export default function Home() {
           <h2 className="mb-2 text-center text-2xl font-bold text-stone-800">
             From Wilted to Wonderful
           </h2>
-          <p className="mx-auto mb-12 max-w-lg text-center text-sm text-stone-500">
+          <p className="mx-auto mb-16 max-w-lg text-center text-sm text-stone-500">
             See how our community members revived their green friends with a little help
             from our Plant Clinic.
           </p>
@@ -222,7 +222,7 @@ export default function Home() {
 
           {/* Plant Clinic info */}
           <BlurFade delay={0.35} inView>
-            <div className="space-y-5">
+            <div className="space-y-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
                 <span className="text-lg">🌿</span>
               </div>
