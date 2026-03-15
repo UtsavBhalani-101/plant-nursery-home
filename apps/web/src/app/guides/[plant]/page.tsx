@@ -35,7 +35,7 @@ export default async function PlantGuidePage({
     const guide = plantsBySlug[plant];
     if (!guide) notFound();
 
-    const otherPlants = allPlants.filter((p) => p.slug !== guide.slug);
+    const otherPlants = allPlants.filter((p) => p.slug !== guide.slug).slice(0, 3);
 
     return (
         <main className="min-h-screen bg-[#f7f6f3]">
