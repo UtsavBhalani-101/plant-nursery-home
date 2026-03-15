@@ -39,7 +39,7 @@ export default async function PlantGuidePage({
 
     return (
         <main className="min-h-screen bg-[#f7f6f3]">
-            <div className="mx-auto max-w-6xl px-4 pt-24 pb-16 md:px-6">
+            <div className="mx-auto max-w-6xl px-4 pt-8 pb-16 md:px-6 md:pt-16 lg:pt-24">
                 <div className="grid gap-8 md:grid-cols-[1fr_320px] lg:gap-12 lg:grid-cols-[1fr_340px]">
                     {/* ── LEFT COLUMN ─────────────────────────────────────────────── */}
                     <div className="flex flex-col gap-12">
@@ -306,7 +306,7 @@ export default async function PlantGuidePage({
                                         New plants arrive weekly!
                                     </p>
                                     <Link
-                                        href="/"
+                                        href="/visit"
                                         className="block w-full rounded-full bg-[#3a7d34] border border-[#3a7d34] py-2.5 text-center text-sm font-bold text-white shadow-sm transition-all hover:bg-[#2d6228] hover:border-[#2d6228]"
                                     >
                                         View Full Shop
