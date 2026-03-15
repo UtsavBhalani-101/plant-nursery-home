@@ -73,7 +73,7 @@ export default function VisitPage() {
                             <div className="overflow-hidden rounded-2xl border border-stone-200 mb-5">
                                 <iframe
                                     title="Flora & Luxe Location"
-                                    src="https://www.openstreetmap.org/export/embed.html?bbox=72.9189%2C22.5545%2C72.9389%2C22.5745&layer=mapnik&marker=22.5645%2C72.9289"
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=72.9335%2C22.5565%2C72.9535%2C22.5765&layer=mapnik&marker=22.5665%2C72.9435"
                                     width="100%"
                                     height="280"
                                     style={{ border: 0 }}

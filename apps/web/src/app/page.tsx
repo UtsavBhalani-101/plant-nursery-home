@@ -267,7 +267,7 @@ export default function Home() {
               <div className="mb-3 overflow-hidden rounded-xl border border-stone-200">
                 <iframe
                   title="Nursery Location"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=72.9189%2C22.5545%2C72.9389%2C22.5745&layer=mapnik&marker=22.5645%2C72.9289"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=72.9335%2C22.5565%2C72.9535%2C22.5765&layer=mapnik&marker=22.5665%2C72.9435"
                   width="100%"
                   height="140"
                   style={{ border: 0 }}
