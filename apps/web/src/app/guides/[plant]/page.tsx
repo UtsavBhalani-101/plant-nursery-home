@@ -113,7 +113,7 @@ export default async function PlantGuidePage({
                             <BlurFade delay={0.15} inView>
                                 <div className="flex items-center gap-3 border-b border-stone-200 pb-3">
                                     <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-[#3a7d34]/10">
-                                        <span className="absolute inline-flex h-4 w-4 animate-ping rounded-full bg-[#3a7d34] opacity-40"></span>
+                                        <span className="absolute inline-flex h-4 w-4 rounded-full bg-[#3a7d34] opacity-40"></span>
                                         <span className="relative inline-flex h-3 w-3 rounded-full bg-[#3a7d34]"></span>
                                     </span>
                                     <h2 className="text-2xl font-bold tracking-tight text-stone-800">Standard Care</h2>
@@ -157,7 +157,7 @@ export default async function PlantGuidePage({
                             <BlurFade delay={0.4} inView>
                                 <div className="flex items-center gap-3 border-b border-stone-200 pb-3">
                                     <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-red-100">
-                                        <span className="absolute inline-flex h-4 w-4 animate-ping rounded-full bg-red-500 opacity-40"></span>
+                                        <span className="absolute inline-flex h-4 w-4 rounded-full bg-red-500 opacity-40"></span>
                                         <span className="relative inline-flex h-3 w-3 rounded-full bg-red-500"></span>
                                     </span>
                                     <h2 className="text-2xl font-bold tracking-tight text-stone-800">Troubleshooting</h2>
@@ -194,7 +194,7 @@ export default async function PlantGuidePage({
                             <BlurFade delay={0.48} inView>
                                 <div className="flex items-center gap-3 border-b border-stone-200 pb-3">
                                     <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100">
-                                        <span className="absolute inline-flex h-4 w-4 animate-ping rounded-full bg-blue-500 opacity-40"></span>
+                                        <span className="absolute inline-flex h-4 w-4 rounded-full bg-blue-500 opacity-40"></span>
                                         <span className="relative inline-flex h-3 w-3 rounded-full bg-blue-500"></span>
                                     </span>
                                     <h2 className="text-2xl font-bold tracking-tight text-stone-800">Plant Summary</h2>
@@ -268,7 +268,10 @@ export default async function PlantGuidePage({
                         <BlurFade delay={0.1} inView>
                             <div className="rounded-3xl border border-stone-200/60 bg-white p-6 shadow-sm">
                                 <div className="mb-6 flex items-center gap-3 border-b border-stone-100 pb-4">
-                                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-stone-100/80 text-lg">📚</span>
+                                    <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100">
+                                        <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-purple-500 opacity-40"></span>
+                                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-purple-500"></span>
+                                    </span>
                                     <h2 className="text-lg font-bold text-stone-800">More Guides</h2>
                                 </div>
                                 <div className="flex flex-col gap-2">
